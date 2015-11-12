@@ -20,7 +20,8 @@ agree={
 rs=requests.session()
 res=rs.post('https://www.ptt.cc/ask/over18',verify=False, data=agree)
 i=1
-for R in range(10363,10358,-1):
+for R in range(10363,10358,-1): #這是文章列表頁面的編號～
+                                #你們可以自己進去網頁八卦版看他現在道地幾頁然後改
     res=rs.get('https://www.ptt.cc/bbs/Gossiping/index'+str(R)+'.html',verify=False)
 #res=rs.get('https://www.ptt.cc/bbs/Gossiping/index10363.html',verify=False)
     soup=BeautifulSoup(res.text,'html.parser')
